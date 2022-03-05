@@ -2,6 +2,7 @@ import { GridItem } from '../GridItem';
 import {Container} from './style'
 import {Level, levels, calculateImc} from '../../helpers/imc'
 import { useState } from 'react';
+import leftArrowImage from '../../assets/leftarrow.png'
 
 export const Main = () => {
     const [heightField, setHeightField] = useState<number>(0);
@@ -14,6 +15,12 @@ export const Main = () => {
         } else {
             alert('Coloque os valores')
         }
+    }
+
+    const handleBackButton = () => {
+        setShowItem(null);
+        setHeightField(0)
+        setWeightField(0);
     }
 
     return (
@@ -49,7 +56,9 @@ export const Main = () => {
              }
              {showItem && 
                <div className="rightBig">
-                 <div className="rightArrow"></div>
+                 <div className="rightArrow" onClick={handleBackButton}>
+                     <img src={leftArrowImage} width={25} alt="" />
+                </div>
                  <GridItem data={showItem} />
                </div>
              

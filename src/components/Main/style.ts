@@ -70,7 +70,22 @@ export const Container = styled.main`
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         }
+
+        .rightArrow {
+          position: absolute;
+          background-color: #227c9d;
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          margin-left: -35px;
+          margin-top: 145px;
+        }
     }
+
 
 `;
 
