@@ -59,6 +59,11 @@ export const Container = styled.main`
         flex: 1;
         display: flex;
 
+        .rightBig {
+            flex: 1;
+            display: flex;
+        }
+
         .grid {
         flex: 1;
         display: grid;

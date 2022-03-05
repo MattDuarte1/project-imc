@@ -27,12 +27,12 @@ export const Main = () => {
             <input 
             type="text" 
             placeholder='Digite a sua altura Ex: 1,5 (em mêtros)' 
-            value={heightField > 0 ? heightField : ''}
+            value={heightField > 0 ? heightField : ' '}
             onChange={e => setHeightField(parseFloat(e.target.value))}
              />
             <input 
             type="text" 
-            value={weightField > 0 ? weightField : ''}
+            value={weightField > 0 ? weightField : ' '}
             onChange={e => setWeightField(parseFloat(e.target.value))}
             placeholder='Digite o seu peso Ex: 75,3 (em kg)'
              />
