@@ -27,6 +27,11 @@ export const Container = styled.main`
 
   }
 
+  .yourImc {
+    font-size: 17px;
+    margin: 10px 0 50px 0;
+  }
+
   .gridInfo {
     font-size: 12px;
     margin-top: 14px;
