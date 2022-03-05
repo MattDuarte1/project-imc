@@ -1,15 +1,16 @@
 import { GridItem } from '../GridItem';
 import {Container} from './style'
-import {levels, calculateImc} from '../../helpers/imc'
+import {Level, levels, calculateImc} from '../../helpers/imc'
 import { useState } from 'react';
 
 export const Main = () => {
     const [heightField, setHeightField] = useState<number>(0);
     const [weightField, setWeightField] = useState<number>(0);
+    const [showItem, setShowItem ] = useState<Level | null>(null);
 
     const handleCalculateButton = () => {
         if(heightField && weightField) {
-
+            setShowItem(calculateImc(heightField, weightField));
         } else {
             alert('Coloque os valores')
         }
