@@ -36,5 +36,9 @@ export const Container = styled.main`
     font-size: 12px;
     margin-top: 14px;
   }
+
+  @media (max-width: 770px) {
+    height: 350px;
+  }
 `;
 

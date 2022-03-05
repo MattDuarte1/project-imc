@@ -36,14 +36,16 @@ export const Main = () => {
             placeholder='Digite a sua altura Ex: 1,5 (em mêtros)' 
             value={heightField > 0 ? heightField : ' '}
             onChange={e => setHeightField(parseFloat(e.target.value))}
+            disabled={showItem ? true : false}
              />
             <input 
             type="text" 
             value={weightField > 0 ? weightField : ' '}
             onChange={e => setWeightField(parseFloat(e.target.value))}
             placeholder='Digite o seu peso Ex: 75,3 (em kg)'
+            disabled={showItem ? true : false}
              />
-            <button onClick={handleCalculateButton}>Calcular</button>
+            <button onClick={handleCalculateButton} disabled={showItem ? true : false}>Calcular</button>
             </div>
 
             <div className="rightSide">

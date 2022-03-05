@@ -3,7 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.main`
     display: flex;
     max-width: 900px;
-    margin: auto ;
+    margin: 0 auto;
+
+
 
     .leftSide {
     margin-right: 40px;
@@ -30,6 +32,7 @@ export const Container = styled.main`
      margin-bottom: 20px;
      font-size: 14px;
      background: var(--background);
+
     }
 
 
@@ -49,15 +52,14 @@ export const Container = styled.main`
       &:hover {
       filter: brightness(0.9);
             }
-
-
-        }
-    }
+     }
+}
 
     .rightSide {
         margin-left: 40px;
         flex: 1;
         display: flex;
+        transition: .5s ease-in;
 
         .rightBig {
             flex: 1;
@@ -83,9 +85,50 @@ export const Container = styled.main`
           cursor: pointer;
           margin-left: -35px;
           margin-top: 145px;
+
+          &:hover {
+              opacity: .8;
+          }
         }
     }
 
+    @media (max-width: 770px) {
+        padding: 0 20px;
+        flex-direction: column;
+        margin: 0px;
+
+       .leftSide {
+          margin-right: 0px;
+        }
+        .rightSide {
+          margin-top: 40px;
+          margin-left: 0px;
+
+
+         .rightArrow {
+            margin-left: 42%;
+            margin-top: -20px;
+            transition: opacity 0.4s ease ;
+
+            &:hover {
+            opacity: 1;
+            }
+
+         }
+            
+       }
+}
+
+@media (max-width: 425px) {
+       .rightSide {
+          .rightArrow {
+             margin-left: 35%;
+         }        
+          .grid {
+           grid-template-columns: 1fr ;
+          }
+       }
+    }
 
 `;
 
