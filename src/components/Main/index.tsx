@@ -47,6 +47,13 @@ export const Main = () => {
                     ))}
                 </div>
              }
+             {showItem && 
+               <div className="rightBig">
+                 <div className="rightArrow"></div>
+                 <GridItem item={showItem} />
+               </div>
+             
+             }
         </div>
         </Container>
     );
