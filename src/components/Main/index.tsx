@@ -50,7 +50,7 @@ export const Main = () => {
              {showItem && 
                <div className="rightBig">
                  <div className="rightArrow"></div>
-                 <GridItem item={showItem} />
+                 <GridItem data={showItem} />
                </div>
              
              }
