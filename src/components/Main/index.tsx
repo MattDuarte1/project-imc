@@ -40,11 +40,13 @@ export const Main = () => {
             </div>
 
             <div className="rightSide">
-             <div className="grid">
-                {levels.map((item, key) => (
-                    <GridItem key={key} data={item}/>
-                ))}
-             </div>
+             {!showItem && 
+                <div className="grid">
+                   {levels.map((item, key) => (
+                     <GridItem key={key} data={item}/>
+                    ))}
+                </div>
+             }
         </div>
         </Container>
     );
